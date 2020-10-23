@@ -9,7 +9,10 @@ This is a simple e-commerce website from customer-side only, using these technol
 - Express
 - Node
 
+## Home Page
 ![Home Page](/images/home-page.jpg?raw=true "Home Page")
+
+## Cart Page
 ![Cart Page](/images/cart-page.jpg?raw=true "Cart Page")
 
 ## How to setup
