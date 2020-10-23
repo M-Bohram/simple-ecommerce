@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-// import ItemImg from '../images/blue_shirt.jpg';
-// import { initializeStore } from '../redux'
 import { useSelector, useDispatch } from "react-redux";
 import { deleteItem } from "../redux/cart/actions";
 import Link from "next/link";
@@ -22,11 +20,11 @@ function EmptyCart() {
 }
 
 export default function Cart() {
-  const dispatch = useDispatch();
-  const orderItemsState = useSelector((state) => state.orderItems);
-  // const orderItemsState = [];
   const [totalCost, setTotalCost] = useState(0);
   const [orderItems, setOrderItems] = useState([...orderItemsState]);
+
+  const dispatch = useDispatch();
+  const orderItemsState = useSelector((state) => state.orderItems);
 
   const updateTotalCost = () => {
     const newTotalCost = orderItems.reduce(
@@ -38,12 +36,10 @@ export default function Cart() {
 
   useEffect(() => {
     setOrderItems(orderItemsState);
-    console.log("orderItemsState", orderItemsState);
   }, [orderItemsState]);
 
   useEffect(() => {
     updateTotalCost();
-    console.log("orderItems", orderItems);
   }, [orderItems]);
 
   const changeItemQty = (orderItem, isIncrease) => {
@@ -62,7 +58,6 @@ export default function Cart() {
     newOrderItems[itemIndex].totalPrice = newItemTotalPrice;
     setOrderItems(newOrderItems);
     updateTotalCost();
-    // dispatch(editToCart(newOrderItems[itemIndex]));
   };
 
   return orderItems.length == 0 ? (
@@ -73,9 +68,8 @@ export default function Cart() {
       <div className={styles["cart-container"]}>
         <ul className={styles["items"]}>
           {orderItems.map((orderItem) => (
-            <>
+            <div key={orderItem.id}>
               <li className={styles["item"]}>
-                {/* <img className={styles["item-image"]} src={require(`../images/${orderItem.image}`)} /> */}
                 <img className={styles["item-image"]} src={orderItem.image} />
                 <div className={styles["item-info"]}>
                   <p className={styles["item-name"]}>{orderItem.name}</p>
@@ -99,7 +93,6 @@ export default function Cart() {
                       +
                     </button>
                   </div>
-                  {/* <p className="item-price">{orderItem.totalPrice.toFixed(2) + " EGP"}</p> */}
                   <button
                     className={styles["item-delete"]}
                     onClick={() => dispatch(deleteItem(orderItem))}
@@ -109,7 +102,7 @@ export default function Cart() {
                 </div>
               </li>
               <hr className={styles["item-separator"]} />
-            </>
+            </div>
           ))}
         </ul>
         <div className={styles["total-cost"]}>

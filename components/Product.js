@@ -4,6 +4,7 @@ import { addToCart } from "../redux/cart/actions";
 import styles from "../styles/Product.module.scss";
 
 export default function Product({
+  id,
   name,
   image,
   category,
@@ -29,7 +30,7 @@ export default function Product({
         className={styles["add-cart-button"]}
         onClick={() =>
           dispatch(
-            addToCart({ name, image, category, price, availableQuantity })
+            addToCart({ id, name, image, category, price, availableQuantity })
           )
         }
       >
