@@ -1,0 +1,22 @@
+@import './variables';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 7em;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 5px 5px 0 #eee;
+    font-family: $logo;
+    width: 100%;
+}
+
+.cart {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.logo {
+    cursor: pointer;
+}

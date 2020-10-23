@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 22em;
+    overflow-x: hidden;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 20em);
+  grid-gap: 0;
+  align-items: end;
+  list-style: none;
+  place-items: center;
+}
+
+.product {
+  align-self: start;
+  justify-self: start;
+}
