@@ -24,4 +24,6 @@ npm install
 npm run dev
 ```
 
+### Populate DB with products from products.json file using API endpoint POST http://localhost:3000/api/product
+
 #### The server will start @ port 3000 unless you specify it as environment variable
