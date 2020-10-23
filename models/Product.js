@@ -11,16 +11,16 @@ const productSchema = new mongoose.Schema({
   },
   category: {
     type: String,
-    required: true
+    required: true,
   },
   price: {
     type: Number,
-    required: true
+    required: true,
   },
   availableQuantity: {
     type: Number,
-    required: true
-  }
+    required: true,
+  },
 });
 
 const Product = mongoose.model("Product", productSchema);

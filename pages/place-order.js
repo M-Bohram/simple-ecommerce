@@ -1,15 +1,15 @@
 import NavBar from "../components/NavBar";
-import Home from "../components/Home";
+import PlaceOrder from "../components/PlaceOrder";
 import Head from "next/head";
 
 export default function Index() {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Place Order</title>
       </Head>
-      <NavBar cart />
-      <Home />
+      <NavBar />
+      <PlaceOrder />
     </>
   );
 }

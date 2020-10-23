@@ -6,6 +6,7 @@ const optimizedImages = require('next-optimized-images');
 module.exports = withPlugins([
   [optimizedImages, {
     /* config for next-optimized-images */
+    optimizeImages: false
   }],
 
   // your other plugins here

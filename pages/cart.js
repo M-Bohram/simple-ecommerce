@@ -1,6 +1,6 @@
-import NavBar from '../components/NavBar';
-import Head from 'next/head';
-import Cart from '../components/Cart';
+import NavBar from "../components/NavBar";
+import Head from "next/head";
+import Cart from "../components/Cart";
 
 export default function Index() {
   return (
@@ -11,5 +11,5 @@ export default function Index() {
       <NavBar />
       <Cart />
     </div>
-  )
+  );
 }
