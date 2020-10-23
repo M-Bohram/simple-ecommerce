@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.scss";
 // import { getProducts } from '../controllers/product';
 
 const getProducts = async () => {
-  const result = await fetch("http://localhost:3001/api/product", {
+  const result = await fetch("http://localhost:3000/api/product", {
     headers: {
       "Content-Type": "application/json",
     },
